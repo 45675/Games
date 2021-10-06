@@ -1,0 +1,12 @@
+.showthis, .showthis2 {
+    display:none;
+    position:absolute;
+    background-color: #b4b3e4;
+    border:1px solid;
+    padding:3px 5px;
+    min-width:300px;
+    border-radius:4px;
+    margin-top:5px;
+    z-index:999;
+    text-align:left;
+}
