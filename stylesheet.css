@@ -6,6 +6,16 @@ small {
     font-size:14px;
     text-align:center;
 }
+medium {
+    color:black;
+    font-size:24px;
+    text-align:center;
+}
+big {
+    color:black;
+    font-size:36px;
+    text-align:center;
+}
 showhidden {
     visibility:visible;
 }
@@ -17,3 +27,5 @@ hidden {
     background-color:#d5abff;
     showhidden:hover {
         visibility:visible;
+    }
+}
