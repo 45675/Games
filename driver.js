@@ -1,4 +1,4 @@
-tick = function() {
+function tick() {
   game.tick();
   view.update();
 }
