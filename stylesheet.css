@@ -22,7 +22,7 @@ big {
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 .tooltip .tooltiptext {
-  visibility: hidden;
+  opacity: 0;
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
@@ -32,5 +32,5 @@ big {
   z-index: 1;
 }
 .tooltip:hover .tooltiptext {
-  visibility: visible;
+  opacity:0;
 }
