@@ -32,5 +32,5 @@ big {
   z-index: 1;
 }
 .tooltip:hover .tooltiptext {
-  opacity:0;
+  opacity:1;
 }
