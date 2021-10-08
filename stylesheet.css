@@ -15,7 +15,7 @@ big {
     color:black;
     font-size:36px;
     text-align:center;
-<style>
+}
 .tooltip {
   position: relative;
   display: inline-block;
@@ -35,4 +35,3 @@ big {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-</style>
