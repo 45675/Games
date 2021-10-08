@@ -24,8 +24,7 @@ big {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #c7ceff;
+  background-color: #c7ceff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
