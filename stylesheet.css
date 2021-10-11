@@ -16,12 +16,12 @@ big {
     font-size:36px;
     text-align:center;
 }
-.tooltip {
+.tooltip1 {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
-.tooltip .tooltiptext {
+.tooltip1 .tooltiptext1 {
   opacity: 0;
   width: 120px;
   background-color: #c7ceff;
@@ -31,6 +31,24 @@ big {
   position: absolute;
   z-index: 1;
 }
-.tooltip:hover .tooltiptext {
+.tooltip1:hover .tooltip1text {
+  opacity:1;
+}
+.tooltip2 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+.tooltip2 .tooltiptext2 {
+  opacity: 0;
+  width: 120px;
+  background-color: #c7ceff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip2:hover .tooltip2text {
   opacity:1;
 }
