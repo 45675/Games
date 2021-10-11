@@ -32,10 +32,10 @@ big {
   z-index: 1;
   display:none;
 }
-.showthat1:hover .showthis1, .showthat2:hover .showthis2 {
+.showthat1:hover .showthis1, .showthat2:hover .showthis2, .showthat3:hover .showthis3 {
     display:block;
 }
-.showthis1, .showthis2 {
+.showthis1, .showthis2, .showthis3 {
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
