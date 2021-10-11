@@ -23,6 +23,7 @@ big {
   display: block;
 }
 .tooltiptext1, .tooltiptext2 {
+  border-bottom: 1px dotted black;
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
