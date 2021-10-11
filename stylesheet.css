@@ -23,7 +23,6 @@ big {
   display: block;
 }
 .tooltiptext1, .tooltiptext2 {
-  border-bottom: 1px dotted black;
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
@@ -32,6 +31,10 @@ big {
   position: absolute;
   z-index: 1;
   display:none;
+}
+.showthat1, .showthat2, .showthat3 {
+    border-bottom: 1px dotted black;
+    text-color:#ff0000;
 }
 .showthat1:hover .showthis1, .showthat2:hover .showthis2, .showthat3:hover .showthis3 {
     display:block;
