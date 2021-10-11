@@ -16,7 +16,10 @@ big {
     font-size:36px;
     text-align:center;
 }
-.tooltip:hover .tooltiptext1, .tooltip:hover .tooltiptext2 {
+.tooltip:hover .tooltiptext1 {
+  display:block;
+}
+.tooltip:hover .tooltiptext2 {
   display: block;
 }
 .tooltiptext1, .tooltiptext2 {
