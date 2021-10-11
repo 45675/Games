@@ -20,7 +20,7 @@ big {
   position: relative;
   display: block;
 }
-.tooltiptext1, tooltiptext2 {
+.tooltiptext1, .tooltiptext2 {
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
