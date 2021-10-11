@@ -17,7 +17,6 @@ big {
     text-align:center;
 }
 .tooltip:hover .tooltiptext1, .tooltip:hover .tooltiptext2 {
-  position: relative;
   display: block;
 }
 .tooltiptext1, .tooltiptext2 {
