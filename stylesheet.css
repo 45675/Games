@@ -18,7 +18,7 @@ big {
 }
 .tooltip:hover .tooltiptext1, .tooltip:hover .tooltiptext2 {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 .tooltiptext1, .tooltiptext2 {
   width: 120px;
