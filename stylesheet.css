@@ -32,17 +32,17 @@ big {
   z-index: 1;
   display:none;
 }
-.showthat1, .showthat2, .showthat3 {
+.showthat1, .showthat2, .showthat3, .showthat4 {
   border-bottom: 1px dotted black;
   color:#ff0000;
 }
-.showthat1:hover .showthis1, .showthat2:hover .showthis2, {
+.showthat1:hover .showthis1, .showthat2:hover .showthis2 {
     display:block;
 }
-.showthat3:hover .showthis3 {
+.showthat3:hover .showthis3, .showthat4:hover .showthis4{
     display:block;
 }
-.showthis1, .showthis2, .showthis3 {
+.showthis1, .showthis2, .showthis3, .showthis4 {
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
