@@ -4,6 +4,6 @@ function levels() {
   this.xpneeded = 0;
   this.xpps = .01;
   this.tick = function(){
-    this.xp += this.xpps
+    this.xp += this.xpps;
   }
 }
