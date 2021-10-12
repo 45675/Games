@@ -10,4 +10,5 @@ function view() {
   this.updateHealth = function() {
     document.getElementById('HP').innerHTML = intToString(main.HP);
     document.getElementById('MaxHP').innerHTML = intToString(main.MaxHP);
+  };
 }
