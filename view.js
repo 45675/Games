@@ -1,6 +1,7 @@
 function view() {
   this.update = function() {
     this.updatelevel();
+    this.updateHealth();
   };
   this.updatelevel = function() {
     document.getElementById('level').innerHTML = intToString(main.level);
