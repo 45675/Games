@@ -1,4 +1,4 @@
-view = function() {
+function view() {
   this.update = function() {
     this.updatelevel();
   }
