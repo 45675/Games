@@ -1,4 +1,4 @@
-function health() {
+function hphealth() {
   this.HP = 0;
   this.MaxHP= 0;
   this.excess = 0;
