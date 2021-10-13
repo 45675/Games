@@ -7,6 +7,6 @@ function health() {
     this.excess = this.HP - this.MaxHP
     if (this.excess > 0) {
       this.HP = this.MaxHP;
-    }
-  }
+    };
+  };
 }
