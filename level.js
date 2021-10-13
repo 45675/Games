@@ -1,4 +1,4 @@
-function levels() {
+function level() {
   this.level = 1;
   this.xp = 0;
   this.xpneeded = 0;
