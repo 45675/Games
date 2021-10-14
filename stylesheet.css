@@ -6,6 +6,7 @@ div {
     background-color: #FF0000;
     color: #fff;
     border:none;
+    paddng: 13px 25px;
 }
 .button1:hover {
     border-radius:4px;
