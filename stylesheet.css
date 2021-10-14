@@ -1,11 +1,16 @@
 div {
     display:inline-block;
 }
-block1 {
-    display:block;
-    background: #a1ffba;
-    border-width: 2px;
-    text-align: center;
+.button1 {
+    border-radius:5px;
+    background-color: #FF0000;
+    color: #fff;
+    border:none;
+}
+.button1:hover {
+    border-radius:4px;
+    background-color: #FF5700;
+    border: #000000;
 }
 small {
     color:black;
