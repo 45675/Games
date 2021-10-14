@@ -1,6 +1,12 @@
 div {
     display:inline-block;
 }
+block1 {
+    display:block;
+    background: #a1ffba;
+    border-width: 2px;
+    text-align: center;
+}
 small {
     color:black;
     font-size:14px;
