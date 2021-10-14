@@ -1,12 +1,14 @@
 function health() {
-  this.HP = 0;
-  this.MaxHP= 0;
+  this.HP = 100;
+  this.MaxHP = 100;
+  this.HPRegen = .01;
   this.excess = 0;
   this.tick = function(change) {
-    this.HP = this.hp + change;
-    this.excess = this.HP - this.MaxHP;
-    if (this.excess > 0) {
-      this.HP = this.MaxHP;
+    this.HP += this.HPRegen;
+    this.HP += change
+    if (this.HP > this.MaxHP) {
+      this.excess = this.HP - this.MaxHP;
+      this.HP -= this.excess;
     };
   };
 }
