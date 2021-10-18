@@ -39,9 +39,11 @@ big {
 }
 .showthat1:hover .showthis1, .showthat2:hover .showthis2 {
     display:block;
+    cursor:pointer;
 }
 .showthat3:hover .showthis3, .showthat4:hover .showthis4{
     display:block;
+    cursor:pointer;
 }
 .showthis1, .showthis2, .showthis3, .showthis4 {
   width: 120px;
