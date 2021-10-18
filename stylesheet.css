@@ -37,6 +37,7 @@ div {
     color: #FFF;
     border:none;
     background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
+    background-size:contain;
 }
 .woods:hover {
     border-color: #FFF;
