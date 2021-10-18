@@ -2,19 +2,20 @@ div {
     display:inline-block;
 }
 .button1 {
+    font-size: 24px;
     border-radius:5px;
     background-color: #FF0000;
     color: #fff;
-    border:none;
-    paddng: 15px 40px;
+    border: none;
+    border-radius: 5px
 }
 .button1:hover {
-    border-radius:4px;
+    border-radius:6px;
     background-color: #FF5700;
     border: #000000;
 }
 .button:active {
-    transform: scale(.75);
+    transform: translateY(4px);
 }
 small {
     color: 000000;
