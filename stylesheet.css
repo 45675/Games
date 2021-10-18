@@ -21,7 +21,7 @@ div {
     border-radius:5px;
     color: #fff;
     border:none;
-    background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif) no-repeat;
+    background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     background-size: contain;
 }
 .camp:hover {
@@ -29,6 +29,21 @@ div {
     border-size: 2px;
 }
 .camp:active {
+    transform: translateY(4px);
+}
+.woods {
+    font-size: 24px;
+    border-radius:5px;
+    color: #FFF;
+    border:none;
+    background:center url(https://i.postimg.cc/LX6JTsyw/tree.gif);
+    background-size:contain;
+}
+.woods:hover {
+    border-color: #FFF;
+    border-size:2px;
+}
+.woods:active {
     transform: translateY(4px);
 }
 small {
