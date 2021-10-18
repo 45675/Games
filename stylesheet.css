@@ -7,7 +7,6 @@ div {
     background-color: #FF0000;
     color: #fff;
     border: none;
-    border-radius: 5px
 }
 .button1:hover {
     border-radius:6px;
@@ -15,8 +14,19 @@ div {
     border: #000000;
     cursor:pointer;
 }
-.button:active {
+.button1:active {
     transform: translateY(4px);
+}
+.button2 {
+    font-size: 24px;
+    border-radius:5px;
+    color: #fff;
+    border:none;
+    background-image: center url(https://i.postimg.cc/1Xgfp7m2/campfire.png);
+    background-size: contain;
+}
+.button2:hover {
+    background-image: url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
 }
 small {
     color: 000000;
