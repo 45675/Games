@@ -37,7 +37,6 @@ div {
     color: #FFF;
     border:none;
     background:center url(https://i.postimg.cc/LX6JTsyw/tree.gif);
-    background-size:contain;
 }
 .woods:hover {
     border-color: #FFF;
