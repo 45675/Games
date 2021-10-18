@@ -33,22 +33,6 @@ big {
     font-size:36px;
     text-align:center;
 }
-.tooltip:hover .tooltiptext1 {
-  display:block;
-}
-.tooltip:hover .tooltiptext2 {
-  display: block;
-}
-.tooltiptext1, .tooltiptext2 {
-  width: 120px;
-  background-color: #c7ceff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  display:none;
-}
 .showthat1, .showthat2, .showthat3, .showthat4 {
   border-bottom: 1px dotted black;
   color:#ff0000;
