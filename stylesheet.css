@@ -22,7 +22,7 @@ div {
     border-radius:5px;
     color: #fff;
     border:none;
-    background-image: url(https://i.postimg.cc/bNhZGgXC/campfire.gif) no-repeat;
+    background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif) no-repeat;
     background-size: contain;
 }
 .button2:hover {
