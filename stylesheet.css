@@ -25,8 +25,8 @@ div {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif) no-repeat;
     background-size: contain;
 }
-.button2:hover {
-    background-image: url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
+.button2:active {
+    transform: translateY(4px);
 }
 small {
     color: 000000;
