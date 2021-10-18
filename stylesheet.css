@@ -1,23 +1,22 @@
 div {
     display:inline-block;
 }
-.button1 {
+.me {
     font-size: 24px;
     border-radius:5px;
-    background-color: #FF0000;
+    background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
+    background-size:contain;
     color: #fff;
     border: none;
 }
-.button1:hover {
-    border-radius:6px;
-    background-color: #FF5700;
-    border: #000000;
-    cursor:pointer;
+.me:hover {
+    border-color: #FFF;
+    border-size: 2px;
 }
-.button1:active {
+.me:active {
     transform: translateY(4px);
 }
-.button2 {
+.camp {
     font-size: 24px;
     border-radius:5px;
     color: #fff;
@@ -25,7 +24,11 @@ div {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif) no-repeat;
     background-size: contain;
 }
-.button2:active {
+.camp:hover {
+    border-color: #FFF;
+    border-size: 2px;
+}
+.camp:active {
     transform: translateY(4px);
 }
 small {
