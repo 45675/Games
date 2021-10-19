@@ -1,0 +1,14 @@
+div {
+  display:inline-block;
+}
+body {
+  height: 100%;
+  margin: 0;
+  border-width: 0px !important;
+  overflow-x: hidden;
+}
+body.light {
+  background: #E3E7EA;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
