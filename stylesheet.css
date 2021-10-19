@@ -79,7 +79,7 @@ big {
     display:block;
     cursor:pointer;
 }
-.showthis1, .showthis2, .showthis3, .showthis4 {
+.showthis, .showthis1, .showthis2, .showthis3, .showthis4 {
   width: 120px;
   background-color: #c7ceff;
   text-align: center;
