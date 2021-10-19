@@ -1,6 +1,10 @@
 div {
     display:inline-block;
 }
+.stats-indicator span.label {
+    text-transform: lowercase;
+}
+
 .me {
     font-size: 24px;
     border-radius:5px;
