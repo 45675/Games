@@ -1,9 +1,5 @@
-function level() {
-  this.level = 1;
-  this.xp = 0;
-  this.xpneeded = 0;
-  this.xpps = .01;
-  this.tick = function(){
-    this.xp += this.xpps;
+function level(){
+  this.levelup = function(){
+    document.getElementById("level-change-indicator").innerHTML += 1
   };
 }
