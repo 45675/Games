@@ -19,7 +19,7 @@ div {
 .showthis {
     display:none;
 }
-.me:hover .showthis {
+.showthat:hover .showthis {
     display:block;
 }
 .camp {
