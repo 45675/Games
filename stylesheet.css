@@ -33,7 +33,7 @@ ul.tabs .camp:hover {
 ul.tabs .camp:active {
     transform: translateY(4px);
 }
-ul.tabs .woods {;
+ul.tabs .woods {
     background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
     background-size:contain;
 }
@@ -43,6 +43,8 @@ ul.tabs .woods:hover {
 }
 ul.tabs .woods:active {
     transform: translateY(4px);
+light {
+    background: #E3E7EA;
 }
 small {
     color: 000000;
