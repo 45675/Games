@@ -4,8 +4,10 @@ div {
 .stats-indicator span.label {
     text-transform: lowercase;
 }
-
-.me {
+ul.tabs {
+    padding-left: 5px !important;
+}
+ul.tabs .me {
     font-size: 24px;
     border-radius:5px;
     background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
@@ -13,20 +15,14 @@ div {
     color: #fff;
     border: none;
 }
-.me:hover {
+ul.tabs .me:hover {
     border-color: #FFF;
     border-size: 2px;
 }
-.me:active {
+ul.tabs .me:active {
     transform: translateY(4px);
 }
-.showthis {
-    display:none;
-}
-.showthat:hover .showthis {
-    display:block;
-}
-.camp {
+ul.tabs .camp {
     font-size: 24px;
     border-radius:5px;
     color: #fff;
@@ -34,14 +30,14 @@ div {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     background-size: contain;
 }
-.camp:hover {
+ul.tabs .camp:hover {
     border-color: #FFF;
     border-size: 2px;
 }
-.camp:active {
+ul.tabs .camp:active {
     transform: translateY(4px);
 }
-.woods {
+ul.tabs .woods {
     font-size: 24px;
     border-radius:5px;
     color: #FFF;
@@ -49,11 +45,11 @@ div {
     background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
     background-size:contain;
 }
-.woods:hover {
+ul.tabs .woods:hover {
     border-color: #FFF;
     border-size:2px;
 }
-.woods:active {
+ul.tabs .woods:active {
     transform: translateY(4px);
 }
 small {
@@ -93,4 +89,9 @@ big {
   z-index: 1;
   display:none;
 }
-
+.showthis {
+    display:none;
+}
+.showthat:hover .showthis {
+    display:block;
+}
