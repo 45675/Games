@@ -16,6 +16,12 @@ div {
 .me:active {
     transform: translateY(4px);
 }
+.showthis {
+    display:none;
+}
+.me:hover .showthis {
+    display:block;
+}
 .camp {
     font-size: 24px;
     border-radius:5px;
