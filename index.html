@@ -26,12 +26,22 @@
       Woods
     </button>
     <br><br>
+    
+    
     <div class="showthat1">
-      Level #
+      <div id="stats-level" class="stats-indicator">
+        <span class="label">Level</span>
+        <div class="stats-value-container">
+          <span class="value">0</span>
+          <div id="level-change-indicator" class="change-indicator"></div>
+        </div>
+      </div>
       <div class="showthis1">
         XP/MaxXP XP
       </div>
     </div>
+    
+    
     <div class="showthat2">
       <img src="heart (1).jpg"/>
       Health
@@ -53,5 +63,5 @@
         Defense
       </div>
     </div>
-    <button id="1button" >
+    <input id="1button" type="button" value="Level Up" onclick="LevelUp(1);" />
   </body> 
