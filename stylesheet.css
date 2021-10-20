@@ -2,7 +2,7 @@ div {
     display:inline-block;
 }
 .page {
-    background: #FFF;
+    background-color: #FFF;
 }
 .page ul.maintabs {
     padding-left:5px;
@@ -77,7 +77,10 @@ div {
     cursor:help;
 }
 .page .home .body .description .hoverable:hover .page ul.maintabs {
-    border-
+    border-style:solid;
+    border-color:#FF0000;
+    border-width: 5px;
+}
 .page .home .body .image {
     height:contain;
     width:auto;
