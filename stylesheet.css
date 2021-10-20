@@ -6,9 +6,11 @@ div {
 }
 .page ul.maintabs {
     padding-left:5px;
+    background-color: #E3E7E3;
     font-size:24px;
     color: #FFF;
-    border-radius: 6px;
+    border-radius: 30px;
+    padding: 10px;
     border: none;
 }
 .page ul.maintabs .home {
@@ -55,4 +57,28 @@ div {
     border-color: #FFF;
     border-size:2px;
     cursor:pointer;
+}
+.page .body {
+    background-color: #E3E7E3;
+    width:98%;
+    height:auto;
+    display:block;
+    color:#FFF;
+}
+.page .home .body .title {
+    font-weight:bold;
+    font-size:20px;
+}
+.page .home .body .description {
+    font-size:16px;
+}
+.page .home .body .description .hoverable {
+    color: #FF0000;
+    cursor:help;
+}
+.page .home .body .description .hoverable:hover .page ul.maintabs {
+    border-
+.page .home .body .image {
+    height:contain;
+    width:auto;
 }
