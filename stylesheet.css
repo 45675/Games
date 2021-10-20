@@ -15,7 +15,7 @@ div {
     max-height:44px
 }
 .page ul.maintabs .home {
-    padding: 10px;
+    border:none;
 }
 .page ul.maintabs .home:hover {
     border-color: #FF0000;
@@ -64,6 +64,9 @@ div {
     border-size:2px;
     cursor:pointer;
 }
+.page ul.maintabs .woods:active {
+    transform: translateY(4px);
+}
 .page .body {
     background-color: #8C8C8C;
     width:98%;
@@ -85,7 +88,17 @@ div {
     color: #FF0000;
     cursor:help;
 }
-.page .home .body .description .hoverable:hover .page ul.maintabs {
+.page .home .body .description .hoverable:hover .page ul.maintabs .me {
+    border-style:solid;
+    border-color:#FF0000;
+    border-width: 5px;
+}
+.page .home .body .description .hoverable:hover .page ul.maintabs .camp {
+    border-style:solid;
+    border-color:#FF0000;
+    border-width: 5px;
+}
+.page .home .body .description .hoverable:hover .page ul.maintabs .woods {
     border-style:solid;
     border-color:#FF0000;
     border-width: 5px;
