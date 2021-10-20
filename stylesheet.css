@@ -4,13 +4,13 @@ div {
 .stats-indicator span.label {
     text-transform: lowercase;
 }
+ul.stats {
 ul.tabs {
     padding-left: 5px !important;
     font-size: 24px;
     border-radius:6px;
     color: #fff;
-    border: none;
-    cursor: pointer;
+    border: none;;
 }
 ul.tabs .me {
     background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
@@ -19,6 +19,7 @@ ul.tabs .me {
 ul.tabs .me:hover {
     border-color: #FFF;
     border-size: 2px;
+    cursor:pointer;
 }
 ul.tabs .me:active {
     transform: translateY(4px);
@@ -30,6 +31,7 @@ ul.tabs .camp {
 ul.tabs .camp:hover {
     border-color: #FFF;
     border-size: 2px;
+    cursor:pointer;
 }
 ul.tabs .camp:active {
     transform: translateY(4px);
@@ -41,6 +43,7 @@ ul.tabs .woods {
 ul.tabs .woods:hover {
     border-color: #FFF;
     border-size:2px;
+    cursor:pointer;
 }
 ul.tabs .woods:active {
     transform: translateY(4px);
