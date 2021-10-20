@@ -15,8 +15,7 @@ div {
     max-height:44px
 }
 .page ul.maintabs .home {
-    height:contain;
-    width:auto;
+    padding: 10px;
 }
 .page ul.maintabs .home:hover {
     border-color: #FF0000;
