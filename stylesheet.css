@@ -15,6 +15,14 @@ ul.tabs .home {
     width:24px;
     height:24px;
 }
+ul.tabs .home:hover {
+    border-color: #FF0000;
+    border-size: 2px;
+    cursor:pointer;
+}
+ul.tabs .home:active {
+    transform: translateY(4px);
+}
 ul.tabs .me {
     background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
     background-size:contain;
