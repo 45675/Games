@@ -14,8 +14,8 @@ div {
     border: none;
 }
 .page ul.maintabs .home {
-    width: 4.68%;
-    height: 4.68%;
+    height:contain;
+    width:auto;
 }
 .page ul.maintabs .home:hover {
     border-color: #FF0000;
