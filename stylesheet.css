@@ -12,10 +12,7 @@ div {
     border-radius: 30px;
     padding: 10px;
     border: none;
-    max-height:44px
-}
-.page ul.maintabs .home {
-    border:none;
+    max-height:44px;
 }
 .page ul.maintabs .home:hover {
     border-color: #FF0000;
