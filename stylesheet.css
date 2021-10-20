@@ -1,3 +1,58 @@
 div {
     display:inline-block;
 }
+.page {
+    background: #FFF;
+}
+.page ul.maintabs {
+    padding-left:5px;
+    font-size:24px;
+    color: #FFF;
+    border-radius: 6px;
+    border: none;
+}
+.page ul.maintabs .home {
+    width: 4.68%;
+    height: 4.68%;
+}
+.page ul.maintabs .home:hover {
+    border-color: #FF0000;
+    border-size: 2px;
+    cursor:pointer;
+}
+.page ul.maintabs .home:active {
+    transform: translateY(4px);
+}
+.page ul.maintabs .me {
+    background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
+    background-size:contain;
+}
+.page ul.maintabs .me:hover {
+    border-color: #FFF;
+    border-size: 2px;
+    cursor:pointer;
+}
+.page ul.maintabs .me:active {
+    transform: translateY(4px);
+}
+.page ul.maintabs .camp {
+    background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
+    background-size: contain;
+}
+.page ul.maintabs .camp:hover {
+    border-color: #FFF;
+    border-size: 2px;
+    cursor:pointer;
+}
+.page ul.maintabs .camp:active {
+    transform: translateY(4px);
+}
+.page ul.maintabs .woods {
+    background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
+    background-size:contain;
+}
+.page ul.maintabs .woods:hover {
+    border-color: #FFF;
+    border-size:2px;
+    cursor:pointer;
+}
