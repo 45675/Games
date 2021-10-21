@@ -12,6 +12,9 @@ select {
   padding:10px;
   margin:-5px -5px -5px -5px;
 }
+#tabs select option {
+    display: inline-block;
+}
 #switch-home:hover {
     border-color: #FF0000;
     border-size: 2px;
