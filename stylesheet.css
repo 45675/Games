@@ -74,33 +74,33 @@ div {
     border: none;
     max-height:91%;
 }
-.page .home .body .title {
+.page .homepage .body .title {
     font-weight:bold;
     font-size:20px;
 }
-.page .home .body .description {
+.page .homepage .body .description {
     font-size:16px;
 }
-.page .home .body .description .hoverable {
+.page .homepage .body .description .hoverable {
     color: #FF0000;
     cursor:help;
 }
-.page .home .body .description .hoverable:hover .page ul.maintabs .me {
+.page .homepage .body .description .hoverable:hover .page ul.maintabs .me {
     border-style:solid;
     border-color:#FF0000;
     border-width: 5px;
 }
-.page .home .body .description .hoverable:hover .page ul.maintabs .camp {
+.page .homepage .body .description .hoverable:hover .page ul.maintabs .camp {
     border-style:solid;
     border-color:#FF0000;
     border-width: 5px;
 }
-.page .home .body .description .hoverable:hover .page ul.maintabs .woods {
+.page .homepage .body .description .hoverable:hover .page ul.maintabs .woods {
     border-style:solid;
     border-color:#FF0000;
     border-width: 5px;
 }
-.page .home .body .image {
+.page .homepage .body .image {
     height:contain;
     width:auto;
 }
