@@ -35,6 +35,10 @@ div {
 .page ul.maintabs .me:active {
     transform: translateY(4px);
 }
+.page ul.maintabs .me:selected {
+    border-color: #FFFF00;
+    border-width: 5px;
+}
 .page ul.maintabs .camp {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     background-size: cover;
