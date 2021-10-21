@@ -4,7 +4,7 @@ div {
 .page {
     background-color: #FFF;
 }
-.page select.tabs ul.maintabs {
+.page ul.maintabs select.tabs {
     padding-left:5px;
     background-color: #8C8C8C;
     font-size:24px;
@@ -13,54 +13,54 @@ div {
     padding: 10px;
     border: none;
 }
-.page select.tabs ul.maintabs .home:hover {
+.page ul.maintabs select.tabs .home:hover {
     border-color: #FF0000;
     border-size: 2px;
     cursor:pointer;
 }
-.page select.tabs ul.maintabs .home:active {
+.page ul.maintabs select.tabs .home:active {
     transform: translateY(4px);
 }
-.page select.tabs ul.maintabs .me {
+.page ul.maintabs select.tabs .me {
     background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
     background-size:cover;
     border-radius: 30px;
     padding: 10px;
 }
-.page select.tabs ul.maintabs .me:hover {
+.page ul.maintabs select.tabs .me:hover {
     border-color: #FFF;
     border-size: 2px;
     cursor:pointer;
 }
-.page select.tabs ul.maintabs .me:active {
+.page ul.maintabs select.tabs .me:active {
     transform: translateY(4px);
 }
-.page select.tabs ul.maintabs .camp {
+.page ul.maintabs select.tabs .camp {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     background-size: cover;
     border-radius: 30px;
     padding: 10px;
 }
-.page select.tabs ul.maintabs .camp:hover {
+.page ul.maintabs select.tabs .camp:hover {
     border-color: #FFF;
     border-size: 2px;
     cursor:pointer;
 }
-.page select.tabs ul.maintabs .camp:active {
+.page ul.maintabs select.tabs .camp:active {
     transform: translateY(4px);
 }
-.page select.tabs ul.maintabs .woods {
+.page ul.maintabs select.tabs .woods {
     background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
     background-size:cover;
     border-radius: 30px;
     padding: 10px;
 }
-.page select.tabs ul.maintabs .woods:hover {
+.page ul.maintabs select.tabs .woods:hover {
     border-color: #FFF;
     border-size:2px;
     cursor:pointer;
 }
-.page select.tabs ul.maintabs .woods:active {
+.page ul.maintabs select.tabs .woods:active {
     transform: translateY(4px);
 }
 .page .body {
