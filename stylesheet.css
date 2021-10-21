@@ -4,6 +4,14 @@ div {
 .page {
     background-color: #FFF;
 }
+#switch-home:hover {
+    border-color: #FF0000;
+    border-size: 2px;
+    cursor:pointer;
+}
+#switch-home:active {
+    translate: translateY(4px);
+}
 .page .maintabs #tabs select option {
     opacity: .7;
 }
