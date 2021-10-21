@@ -21,7 +21,7 @@ select {
     cursor:pointer;
 }
 #switch-home:active {
-    translate: translateY(4px);
+    translation: translateY(4px);
 }
 .page .maintabs #tabs select option {
     opacity: .7;
