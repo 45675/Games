@@ -23,7 +23,7 @@ div {
 }
 .page ul.maintabs .me {
     background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
-    background-size:contain;
+    background-size:cover;
     border-radius: 30px;
     padding: 10px;
 }
@@ -37,7 +37,7 @@ div {
 }
 .page ul.maintabs .camp {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
-    background-size: contain;
+    background-size: cover;
     border-radius: 30px;
     padding: 10px;
 }
@@ -51,7 +51,7 @@ div {
 }
 .page ul.maintabs .woods {
     background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
-    background-size:contain;
+    background-size:cover;
     border-radius: 30px;
     padding: 10px;
 }
