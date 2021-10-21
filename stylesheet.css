@@ -4,6 +4,14 @@ div {
 .page {
     background-color: #FFF;
 }
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding:10px;
+  margin:-5px -5px -5px -5px;
+}
 #switch-home:hover {
     border-color: #FF0000;
     border-size: 2px;
@@ -16,7 +24,7 @@ div {
     opacity: .7;
 }
 .page .maintabs #tabs select option.me {
-    background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
+    background-image:url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
     background-size:cover;
     border-radius: 30px;
     padding: 10px;
@@ -30,13 +38,13 @@ div {
     opacity:1;
 }
 .page .maintabs #tabs select option.camp {
-    background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
+    background-image:url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     background-size: cover;
     border-radius: 30px;
     padding: 10px;
 }
 .page .maintabs #tabs select option.woods {
-    background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
+    background-image:url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
     background-size:cover;
     border-radius: 30px;
     padding: 10px;
