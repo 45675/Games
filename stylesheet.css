@@ -4,7 +4,7 @@ div {
 .page {
     background-color: #FFF;
 }
-.page ul.maintabs select.tabs {
+.page ul.maintabs {
     padding-left:5px;
     background-color: #8C8C8C;
     font-size:24px;
@@ -13,54 +13,54 @@ div {
     padding: 10px;
     border: none;
 }
-.page ul.maintabs select.tabs .home:hover {
+.page ul.maintabs .home:hover {
     border-color: #FF0000;
     border-size: 2px;
     cursor:pointer;
 }
-.page ul.maintabs select.tabs .home:active {
+.page ul.maintabs .home:active {
     transform: translateY(4px);
 }
-.page ul.maintabs select.tabs .me {
+.page ul.maintabs .me {
     background:center url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
     background-size:cover;
     border-radius: 30px;
     padding: 10px;
 }
-.page ul.maintabs select.tabs .me:hover {
+.page ul.maintabs .me:hover {
     border-color: #FFF;
     border-size: 2px;
     cursor:pointer;
 }
-.page ul.maintabs select.tabs .me:active {
+.page ul.maintabs .me:active {
     transform: translateY(4px);
 }
-.page ul.maintabs select.tabs .camp {
+.page ul.maintabs .camp {
     background:center url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     background-size: cover;
     border-radius: 30px;
     padding: 10px;
 }
-.page ul.maintabs select.tabs .camp:hover {
+.page ul.maintabs .camp:hover {
     border-color: #FFF;
     border-size: 2px;
     cursor:pointer;
 }
-.page ul.maintabs select.tabs .camp:active {
+.page ul.maintabs .camp:active {
     transform: translateY(4px);
 }
-.page ul.maintabs select.tabs .woods {
+.page ul.maintabs .woods {
     background:center url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
     background-size:cover;
     border-radius: 30px;
     padding: 10px;
 }
-.page ul.maintabs select.tabs .woods:hover {
+.page ul.maintabs .woods:hover {
     border-color: #FFF;
     border-size:2px;
     cursor:pointer;
 }
-.page ul.maintabs select.tabs .woods:active {
+.page ul.maintabs .woods:active {
     transform: translateY(4px);
 }
 .page .body {
