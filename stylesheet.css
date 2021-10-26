@@ -22,6 +22,7 @@ select {
   margin:-5px -5px -5px -5px;
 }
 select option {
+    display:inline-block;
     opacity:.7;
     border-radius: 30px;
     padding: 10px;
