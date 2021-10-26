@@ -4,6 +4,15 @@ div {
 .page {
     background-color: #FFF;
 }
+#switch-tabs {
+    padding-left:5px;
+    background-color: #8C8C8C;
+    font-size:24px;
+    color: #FFF;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
+}
 select {
   appearance: none;
   -webkit-appearance: none;
@@ -12,27 +21,28 @@ select {
   padding:10px;
   margin:-5px -5px -5px -5px;
 }
-#tabs select option {
-    display: inline-block;
+select option {
+    opacity:.7;
+    border-radius: 30px;
+    padding: 10px;
+    border: none;
 }
 #switch-home:hover {
+    border:solid;
     border-color: #FF0000;
     border-size: 2px;
     cursor:pointer;
 }
-#switch-home:active {
-    translation: translateY(4px);
+#switch-home:checked {
+    opacity:1;
 }
-.page .maintabs #tabs select option {
-    opacity: .7;
-}
-.page .maintabs #tabs select option.me {
-    background-image:url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
-    background-size:cover;
+#switch-me {
+    background:url(https://i.postimg.cc/RZT2zb0K/person-1.jpg);
     border-radius: 30px;
     padding: 10px;
 }
 #switch-me:hover {
+    border:solid;
     border-color: #FF0000;
     border-size: 2px;
     cursor:pointer;
@@ -40,57 +50,31 @@ select {
 #switch-me:checked {
     opacity:1;
 }
-.page .maintabs #tabs select option.camp {
-    background-image:url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
-    background-size: cover;
+#switch-camp {
+    background:url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
     border-radius: 30px;
     padding: 10px;
 }
-.page .maintabs #tabs select option.woods {
-    background-image:url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
-    background-size:cover;
+#switch-camp:hover {
+    border:solid;
+    border-color: #FF0000;
+    border-size: 2px;
+    cursor:pointer;
+}
+#switch-camp:checked {
+    opacity:1;
+}
+#switch-woods {
+    background:url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
     border-radius: 30px;
     padding: 10px;
 }
+#switch-woods:hover {
+    border:solid;
+    border-color: #FF0000;
+    border-size: 2px;
+    cursor:pointer;
 }
-.page .body {
-    background-color: #8C8C8C;
-    width:98%;
-    height:auto;
-    display:block;
-    color:#FFF;
-    border-radius: 30px;
-    padding: 10px;
-    border: none;
-    max-height:91%;
-}
-.page .homepage .body .title {
-    font-weight:bold !important;
-    font-size:20px;
-}
-.page .homepage .body .description {
-    font-size:16px;
-}
-.page .homepage .body .description .hoverable {
-    color: #FF0000;
-    cursor:help;
-}
-.page .homepage .body .description .hoverable:hover .page ul.maintabs .me {
-    border-style:solid;
-    border-color:#FF0000;
-    border-width: 5px;
-}
-.page .homepage .body .description .hoverable:hover .page ul.maintabs .camp {
-    border-style:solid;
-    border-color:#FF0000;
-    border-width: 5px;
-}
-.page .homepage .body .description .hoverable:hover .page ul.maintabs .woods {
-    border-style:solid;
-    border-color:#FF0000;
-    border-width: 5px;
-}
-.page .homepage .body .image {
-    height:contain;
-    width:auto;
+#switch-woods:checked {
+    opacity:1;
 }
