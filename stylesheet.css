@@ -19,7 +19,7 @@ select {
   background-color: transparent;
   border: 0;
   padding:10px;
-  margin:-5px -5px -5px -5px;
+  margin:-5px -5px -20px -5px;
 }
 select option {
     display:inline-block;
