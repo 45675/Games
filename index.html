@@ -10,24 +10,270 @@
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
   </head>
-  <body class="page">
+  <body>
+  <style>
+    /*select { 
+      height:auto;
+    }
+    #switch-tabs-container {
+      padding-left:5px;
+      background-color: #8C8C8C;
+      font-size:24px;
+      color: #FFF;
+      border-radius: 30px;
+      padding: 10px;
+      border: none;
+    }
+    select {
+      appearance: none;
+      -webkit-appearance: none;
+      user-select: none;
+      background-color: transparent;
+      border: 0;
+      padding:10px;
+      margin:-5px -5px -115px -5px;
+      padding-below:0px;
+    }
+    select:focus {
+      border:none;
+    }
+    select option {
+      display:inline-block;
+      opacity:.7;
+      border-radius: 30px;
+      padding: 10px;
+      border: none;
+      user-select: none;
+    }
+    tabs {
+      padding-left:5px;
+    }
+    tab {
+      padding-left:5px;
+    }
+    #home-page-toggle {
+      display:none;
+    }
+    #switch-home {
+      background:center url(https://i.postimg.cc/d1y0yXhW/25694-1.png/);
+      padding:10px;
+      border-radius:30px;
+      color: #000;
+    }
+    #switch-home:hover {
+      cursor:pointer;
+    }
+    #switch-me {
+      
+    }
+    #switch-me:hover {
+      border:solid;
+      border-color: #FFFF00;
+      border-size: 2px;
+      cursor:pointer;
+      padding:6px;
+    }
+    #switch-me:checked {
+      opacity:1;
+    }
+    #switch-camp {
+      background-image: url(https://i.postimg.cc/bNhZGgXC/campfire.gif);
+      background-size:cover;
+      border-radius: 30px;
+      padding: 10px;
+    }
+    #switch-camp:hover {
+      border:solid;
+      border-color: #FFFF00;
+      border-size: 2px;
+      cursor:pointer;
+      padding:6px;
+    }
+    #switch-camp:checked {
+      opacity:1;
+    }
+    #switch-woods {
+      background-image:url(https://i.postimg.cc/Qx4V8sdJ/ezgif-com-gif-maker.gif);
+      background-size:cover;
+      border-radius: 30px;
+      padding: 10px;
+    }
+    #switch-woods:hover {
+      border:solid;
+      border-color: #FFFF00;
+      border-size: 2px;
+      cursor:pointer;
+      padding:6px;
+    }
+    #switch-woods:checked {
+      opacity:1;
+    }
+    #page-home {
+      background-color: #8C8C8C;
+      width:98%;
+      height:auto;
+      display:block;
+      color:#FFF;
+      border-radius: 30px;
+      padding: 10px;
+      border: none;
+      max-height:91%;
+      visibility:collapse;
+    }
+    #switch-home:checked ~ * #page-home{
+      visibility:visible;
+    }*/
+    #switch-tabs-container {
+      background-color: #8C8C8C;
+      border-radius: 30px;
+      padding:10px;
+    }
+    #tab {
+      display:inline-block;
+      padding:10px;
+      border-radius:30px;
+      border:none;
+    }
+    #switch-home {
+      background-image:url(https://i.postimg.cc/d1y0yXhW/25694-1.png/); 
+      background-size:cover;
+      user-select:none;
+      padding:5px;
+    }
+    #switch-home:hover {
+      cursor:pointer;
+      border:solid;
+      border-radius:30px;
+      border-width:1px;
+    }
+    #switch-me {
+      background-image:url(https://i.postimg.cc/tJ1q6WzK/Person.jpg);
+      background-size:cover;
+      border-radius:30px;
+      padding: 10px;
+    }
+    #switch-me:hover {
+      cursor:pointer;
+      border:solid;
+      border-width:4px;
+      border-color: #FFFF00;
+      padding:6px;
+    }
+    #page-home {
+      display:none;
+    }
+    #home-body {
+      display:block;
+      background-color: #8C8C8C;
+      border-radius:30px;
+    }
+    #home-title {
+      font-size: 30px;
+      padding-left: 20px;
+      padding-up:30px;
+    }
+    #home-description {
+      font-size: 15px;
+      padding:10px;
+    }
+    #home-image {
+      padding-left:10px;
+      padding-below:10px;
+      padding-right:10px;
+      width:auto;
+      height:auto;
+    }
+    #page-me {
+      display:none;
+    }
+    #me-body {
+      display:block;
+      background-color: #8C8C8C;
+      border-radius:30px;
+    }
+    #me-title {
+      font-size: 30px;
+      padding-left:20px;
+      padding-up:30px;
+    }
+    #me-inventory-container {
+      display:inline-block;
+      padding:10px;
+    }
+    #inventory-items-container {
+      display:block;
+      padding:10px;
+      border:solid;
+    }
+    .inventory-container {
+      display:block;
+      font-size:10px;
+      padding:7px;
+      width:20px;
+      border:solid;
+    }
+    #me-bag {
+      padding:10px;
+      display:inline-block;
+    }
+    #bag-container {
+      display:inline-block;
+    }
+    #bag-item-container {
+      display:inline-block;
+      border:solid;
+      padding:5px;
+    }
+    .me-item-container {
+      display:inline-block;
+      border:solid;
+      padding:5px;
+    }
+    #bag-text {
+      font-size: 16px;
+      padding:5px;
+    }
+    #me-subtitle {
+      font-size: 24px;
+      padding-left: 20px;
+    }
+    #me-subtitle1 {
+      font-size: 24px;
+      text-align:right;
+    }
+    #home-page-toggle, #me-page-toggle {
+      display:none;
+    }
+    #camp-page-toggle, #woods-page-toggle {
+      display:none;
+    }
+    #home-page-toggle:checked ~ #page-home {
+      display:block;
+    }
+    #me-page-toggle:checked ~ #page-me {
+      display:block;
+    }
+  </style>
+    <input type="radio" name="toggle-tab" id="home-page-toggle"/>
+    <input type="radio" name="toggle-tab" id="me-page-toggle" checked/>
+    <input type="radio" name="toggle-tab" id="camp-page-toggle"/>
+    <input type="radio" name="toggle-tab" id="woods-page-toggle"/>
     <div id="switch-tabs-container">
-      <img src="https://i.postimg.cc/d1y0yXhW/25694-1.png/" id="switch-home"/>
-        <select size="3" id="tabs">
-          <option id="switch-me">Me</option>
-          <option id="switch-camp">Camp</option>
-          <option id="switch-woods">Woods</option>
-        </select>
+      <div id="tabs">
+        <span id="tab"><label for="home-page-toggle" id="switch-home">----</label></span>
+        <span id="tab"><label for="me-page-toggle" id="switch-me">Me</label></span>
+        <span id="tab"><label for="camp-page-toggle" id="switch-camp">Camp</label></span>
+        <span id="tab"><label for="woods-page-toggle" id="switch-woods">Woods</label></span>
       </div>
     </div>
-    <p>1</p>
+    <br>
     <div id="page-home">
       <div id="home-body">
         <div id="home-title">Home</div>
-        <br>
-        <br>
         <div id="home-description">
-          This is the home page. Click one of the <div class="hoverable">tabs above</div> to begin. Until then, enjoy this image of a cat.
+        <br>
+        <br>
+          This is the home page. Click one of the tabs above to begin. Until then, enjoy this image of a cat.
         </div>
         <div id="home-image">
           <img src="https://i.postimg.cc/XJ1HSG2B/67586673.jpg"/>
@@ -38,7 +284,60 @@
       <div id="me-body">
         <div id="me-title">Me</div>
         <br><br>
-        <div id="me-subtitle">Inventory</div>
+        <div id="me-inventory-container">
+          <div id="me-subtitle">Inventory</div>
+<!--top eyes mouth neck chest back wrist hands fingers legs feet weight-->
+          <br>
+          <div id="inventory-items-container">
+            <div class="inventory-container" id="inventory-top">Top</div>
+            <div class="inventory-container" id="inventory-eyes">Eyes</div>
+            <div class="inventory-container" id="inventory-mouth">Mouth</div>
+            <div class="inventory-container" id="inventory-neck">Neck</div>
+            <div class="inventory-container" id="inventory-chest">Chest</div>
+            <div class="inventory-container" id="inventory-back">Back</div>
+            <div class="inventory-container" id="inventory-wrist">Wrist</div>
+            <div class="inventory-container" id="inventory-hands">Hands</div>
+            <div class="inventory-container" id="inventory-fingers">Fingers</div>
+            <div class="inventory-container" id="inventory-legs">Legs</div>
+            <div class="inventory-container" id="inventory-feet">Feet</div>
+            <div class="inventory-container" id="inventory-weight">Weight</div>
+          </div>
+        </div>
+        
+        <div id="me-bag">
+          <div id="bag-container">
+            <div id="me-subtitle1">Bag</div>
+              <br>
+              <div id="bag-item-container">
+                <div id="bag-text">You currently have no items in your bag.</div>
+                <div class="me-item-container" id="bag-a1">a1</div>
+                <div class="me-item-container" id="bag-a2">a2</div>
+                <div class="me-item-container" id="bag-a3">a3</div>
+                <div class="me-item-container" id="bag-a4">a4</div>
+                <div class="me-item-container" id="bag-a5">a5</div>
+                <div class="me-item-container" id="bag-a6">a6</div>
+                <div class="me-item-container" id="bag-a7">a7</div>
+                <div class="me-item-container" id="bag-a8">a8</div>
+                <div class="me-item-container" id="bag-a9">a9</div>
+                <div class="me-item-container" id="bag-a10">a10</div>
+                <br>
+                <div class="me-item-container" id="bag-b1">b1</div>
+                <div class="me-item-container" id="bag-b2">b2</div>
+                <div class="me-item-container" id="bag-b3">b3</div>
+                <div class="me-item-container" id="bag-b4">b4</div>
+                <div class="me-item-container" id="bag-b5">b5</div>
+                <div class="me-item-container" id="bag-b6">b6</div>
+                <div class="me-item-container" id="bag-b7">b7</div>
+                <div class="me-item-container" id="bag-b8">b8</div>
+                <div class="me-item-container" id="bag-b9">b9</div>
+                <div class="me-item-container" id="bag-b10">b10</div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br>
       </div>
     </div>
-  </body> 
+</body>
