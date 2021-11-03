@@ -9,7 +9,9 @@
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
   </head>
-  <body>
+  <!DOCTYPE html>
+<html>
+<body>
   <style>
     /*select { 
       height:auto;
@@ -227,10 +229,38 @@
       display:inline-block;
       border:solid;
       padding:5px;
+      background: #FF0000;
+    }
+    .me-item-container:hover {
+      cursor:help;
+    }
+    .item-stats {
+      text-align: center;
+      display:none;
+    }
+    #item-label {
+      position: absolute;
+    }
+    #item-label:hover {
+      cursor:help;
+    }
+    .item-button {
+      background-color: #000000;
+      border:solid;
+      font-size:10px;
+      font-color: #FFF;
+    }
+    #bag-a1:hover {
+      cursor:help;
+    }
+    #a1-toggle:checked ~ .item-stats {
+      display:block;
+      width:50%;
     }
     #bag-text {
       font-size: 16px;
       padding:5px;
+      text-align:center;
     }
     #me-subtitle {
       font-size: 24px;
@@ -239,13 +269,13 @@
     #me-subtitle1 {
       font-size: 24px;
       text-align:right;
-    }
+    }/*
     #home-page-toggle, #me-page-toggle {
       display:none;
     }
     #camp-page-toggle, #woods-page-toggle {
       display:none;
-    }
+    }*/
     #home-page-toggle:checked ~ #page-home {
       display:block;
     }
@@ -257,6 +287,10 @@
     <input type="radio" name="toggle-tab" id="me-page-toggle" checked/>
     <input type="radio" name="toggle-tab" id="camp-page-toggle"/>
     <input type="radio" name="toggle-tab" id="woods-page-toggle"/>
+    
+    <input type="radio" name="toggle-item" id="a1-toggle"/>
+    <input type="radio" name="toggle-item" id="a2-toggle"/>
+    
     <div id="switch-tabs-container">
       <div id="tabs">
         <span id="tab"><label for="home-page-toggle" id="switch-home">----</label></span>
@@ -285,7 +319,6 @@
         <br><br>
         <div id="me-inventory-container">
           <div id="me-subtitle">Inventory</div>
-<!--top eyes mouth neck chest back wrist hands fingers legs feet weight-->
           <br>
           <div id="inventory-items-container">
             <div class="inventory-container" id="inventory-top">Top</div>
@@ -308,9 +341,8 @@
             <div id="me-subtitle1">Bag</div>
               <br>
               <div id="bag-item-container">
-                <div id="bag-text">You currently have no items in your bag.</div>
-                <div class="me-item-container" id="bag-a1">a1</div>
-                <div class="me-item-container" id="bag-a2">a2</div>
+                <div class="me-item-container" id="bag-a1"><label class="item-label" for="a1-toggle">a1</label></div>
+                <div class="me-item-container" id="bag-a2"><label class="item-label" for="a2-toggle">a2</label></div>
                 <div class="me-item-container" id="bag-a3">a3</div>
                 <div class="me-item-container" id="bag-a4">a4</div>
                 <div class="me-item-container" id="bag-a5">a5</div>
@@ -330,7 +362,27 @@
                 <div class="me-item-container" id="bag-b8">b8</div>
                 <div class="me-item-container" id="bag-b9">b9</div>
                 <div class="me-item-container" id="bag-b10">b10</div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <div id="bag-text">
+                  You currently have no items in your bag.
+                </div>
+                <div id="bag-text">
+                  Currently Selected:
+                </div>
+                <br>
+                <!--
+                <div class="item-stats" id="a1-item-stats">
+                  <div id="a1-name">A1</label><button class="item-button" value="Equip" onclick="inventory.equip()"/>
+                -->
+              <div class="item-stats">
+                  <div class="item-stats-name-container">
+                    <div id="item-name">Name</div>
+                  </div>
+                  <div class="item-button" onclick = "inventory.equip()">
+                    Equip
+                  </div>
+                </div>
+                  
+                <br><br><br><br><br><br><br><br><br><br>                   <br>
                 </div>
               </div>
             </div>
@@ -339,4 +391,26 @@
         <br><br>
       </div>
     </div>
+<script>
+  function inventory() {
+    this.top = 'none';
+    this.eyes = 'none';
+    this.mouth = 'none';
+    this.neck = 'none';
+    this.chest = 'none';
+    this.back = 'none';
+    this.wrist = 'none';
+    this.hands = 'none';
+    this.fingers = 'none';
+    this.legs = 'none';
+    this.feet = 'none';
+    this.weight = 0;
+    
+    this.equip = function(item) {
+      document.getElementById("inventory-top").innerHTML = "a1";
+    }
+    
+  }
+</script>
 </body>
+</html>
