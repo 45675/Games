@@ -7,9 +7,11 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-
+    <script data-main = "libs/main" src = "libs/require.js"></script>
   </head>
   <!DOCTYPE html>
+<html>
+<!DOCTYPE html>
 <html>
 <body>
   <style>
@@ -194,8 +196,6 @@
     }
     #me-title {
       font-size: 30px;
-      padding-left:20px;
-      padding-up:30px;
     }
     #me-inventory-container {
       display:inline-block;
@@ -205,12 +205,9 @@
       display:block;
       padding:10px;
       border:solid;
+      background-color:inherit;
     }
-    .inventory-container {
-      display:block;
-      font-size:10px;
-      padding:7px;
-      width:20px;
+    #inventory-container {
       border:solid;
     }
     #me-bag {
@@ -218,7 +215,8 @@
       display:inline-block;
     }
     #bag-container {
-      display:inline-block;
+      border:solid;
+      align-text:center;
     }
     #bag-item-container {
       display:inline-block;
@@ -234,7 +232,7 @@
     .me-item-container:hover {
       cursor:help;
     }
-    .item-stats {
+    #item-stats {
       text-align: center;
       display:none;
     }
@@ -253,10 +251,6 @@
     #bag-a1:hover {
       cursor:help;
     }
-    #a1-toggle:checked ~ .item-stats {
-      display:block;
-      width:50%;
-    }
     #bag-text {
       font-size: 16px;
       padding:5px;
@@ -264,23 +258,302 @@
     }
     #me-subtitle {
       font-size: 24px;
-      padding-left: 20px;
+      text-align:center;
     }
     #me-subtitle1 {
       font-size: 24px;
       text-align:right;
-    }/*
+    }
     #home-page-toggle, #me-page-toggle {
       display:none;
     }
     #camp-page-toggle, #woods-page-toggle {
       display:none;
-    }*/
+    }
     #home-page-toggle:checked ~ #page-home {
       display:block;
     }
     #me-page-toggle:checked ~ #page-me {
       display:block;
+    }
+    #a1-toggle:checked ~ #item-stats {
+      display:block;
+      width:50%;
+    }
+    .grid-container {
+      display:grid;
+      /*grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+      grid-template-columns: 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px ;*/
+      grid-template-columns: 15px 15px 29px 29px 29px 29px 15px 15px 15px 15px 29px 15px 15px 29px 29px 15px 15px 29px 29px 15px 15px 29px 29px 15px 15px 29px 15px 15px;
+      grid-template-rows: 15px 30px 30px 30px 30px 15px 15px 30px 15px 15px 30px 30px 15px 15px 30px 15px 15px 15px 30px 15px 30px 15px;
+    }
+    .grid-item {
+      text-align:center;
+      padding:2px;
+      border:solid;
+    }
+    .grid-item1 {
+      text-align:center;
+      border:solid;
+    }
+    .grid-item2 {
+      text-align:center;
+      border:solid;
+      background: #FF0000;
+    }
+    #me-title {
+      text-align:center;
+      grid-column-start: 2;
+      grid-column-end:4;
+      grid-row-start:2;
+      grid-row-end:4;
+    }
+    #me-subtitle {
+      grid-column-start: 3;
+      grid-column-end:7;
+      grid-row-start:5;
+      grid-row-end:6;
+    }
+    #me-subtitle1 {  
+      grid-column-start: 24;
+      grid-column-end:28;
+      grid-row-start:5;
+      grid-row-end:6;
+    }
+    #inventory-container {
+      grid-column-start: 2;
+      grid-column-end: 8;
+      grid-row-start: 7;
+      grid-row-end: 17;
+    }
+    #inventory-top {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 8;
+      grid-row-end: 9;
+    }
+    #inventory-eyes {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 8;
+      grid-row-end: 9;
+    }
+    #inventory-mouth {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 9;
+      grid-row-end: 11;
+    }
+    #inventory-neck {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 9;
+      grid-row-end: 11;
+    }
+    #inventory-chest {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 11;
+      grid-row-end: 12;
+    }
+    #inventory-back {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 11;
+      grid-row-end: 12;
+    }
+    #inventory-wrist {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 12;
+      grid-row-end: 13;
+    }
+    #inventory-hands {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 12;
+      grid-row-end: 13;
+    }
+    #inventory-fingers {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 13;
+      grid-row-end: 15;
+    }
+    #inventory-legs {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 13;
+      grid-row-end: 15;
+    }
+    #inventory-feet {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 15;
+      grid-row-end: 16;
+    }
+    #inventory-weight {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 15;
+      grid-row-end: 16;
+    }
+    #bag-container {
+      grid-column-start: 10;
+      grid-column-end: 28;
+      grid-row-start: 7;
+      grid-row-end: 17;
+    }
+    #bag-a1 {
+      grid-column-start: 11;
+      grid-column-end: 13;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a2 {
+      grid-column-start: 13;
+      grid-column-end: 15;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a3 {
+      grid-column-start: 15;
+      grid-column-end: 17;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a4 {
+      grid-column-start: 17;
+      grid-column-end: 19;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a5 {
+      grid-column-start: 19;
+      grid-column-end: 21;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a6 {
+      grid-column-start: 21;
+      grid-column-end: 23;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a7 {
+      grid-column-start: 23;
+      grid-column-end: 25;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-a8 {
+      grid-column-start: 25;
+      grid-column-end: 27;
+      grid-row-start: 8;
+      grid-row-end: 10;
+    }
+    #bag-b1 {
+      grid-column-start: 11;
+      grid-column-end: 13;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b2 {
+      grid-column-start: 13;
+      grid-column-end: 15;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b3 {
+      grid-column-start: 15;
+      grid-column-end: 17;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b4 {
+      grid-column-start: 17;
+      grid-column-end: 19;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b5 {
+      grid-column-start: 19;
+      grid-column-end: 21;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b6 {
+      grid-column-start: 21;
+      grid-column-end: 23;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b7 {
+      grid-column-start: 23;
+      grid-column-end: 25;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-b8 {
+      grid-column-start: 25;
+      grid-column-end: 27;
+      grid-row-start: 10;
+      grid-row-end: 12;
+    }
+    #bag-c1 {
+      grid-column-start: 11;
+      grid-column-end: 13;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c2 {
+      grid-column-start: 13;
+      grid-column-end: 15;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c3 {
+      grid-column-start: 15;
+      grid-column-end: 17;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c4 {
+      grid-column-start: 17;
+      grid-column-end: 19;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c5 {
+      grid-column-start: 19;
+      grid-column-end: 21;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c6 {
+      grid-column-start: 21;
+      grid-column-end: 23;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c7 {
+      grid-column-start: 23;
+      grid-column-end: 25;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-c8 {
+      grid-column-start: 25;
+      grid-column-end: 27;
+      grid-row-start: 12;
+      grid-row-end: 14;
+    }
+    #bag-text {
+      display:none;
+      grid-column-start: 13;
+      grid-column-end: 24;
+      grid-row-start: 8;
+      grid-row-end: 9;
     }
   </style>
     <input type="radio" name="toggle-tab" id="home-page-toggle"/>
@@ -315,22 +588,80 @@
     </div>
     <div id="page-me">
       <div id="me-body">
-        <div id="me-title">Me</div>
-        <br><br>
-        <div id="me-inventory-container">
+        <div class="grid-container">
+          <div id="me-title">Me</div><!---->
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>
+          <div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div><div class="grid-item"></div>-->
+          <div id="inventory-container"></div>
+          <div id="bag-container"></div>
           <div id="me-subtitle">Inventory</div>
+          <div id="me-subtitle1">Bag</div>
+          <div class="grid-item2" id="bag-a1"><label for="a1-toggle">A1</label></div>
+          <div class="grid-item2" id="bag-a2"><label for="a2-toggle">A2</label></div>
+          <div class="grid-item2" id="bag-a3"><label for="a3-toggle">A3</label></div>
+          <div class="grid-item2" id="bag-a4"><label for="a4-toggle">A4</label></div>
+          <div class="grid-item2" id="bag-a5"><label for="a5-toggle">A5</label></div>
+          <div class="grid-item2" id="bag-a6"><label for="a6-toggle">A6</label></div>
+          <div class="grid-item2" id="bag-a7"><label for="a7-toggle">A7</label></div>
+          <div class="grid-item2" id="bag-a8"><label for="a8-toggle">A8</label></div>
+          <div class="grid-item2" id="bag-b1"><label for="b1-toggle">B1</label></div>
+          <div class="grid-item2" id="bag-b2"><label for="b2-toggle">B2</label></div>
+          <div class="grid-item2" id="bag-b3"><label for="b3-toggle">B3</label></div>
+          <div class="grid-item2" id="bag-b4"><label for="b4-toggle">B4</label></div>
+          <div class="grid-item2" id="bag-b5"><label for="b5-toggle">B5</label></div>
+          <div class="grid-item2" id="bag-b6"><label for="b6-toggle">B6</label></div>
+          <div class="grid-item2" id="bag-b7"><label for="b7-toggle">B7</label></div>
+          <div class="grid-item2" id="bag-b8"><label for="b8-toggle">B8</label></div>
+          <div class="grid-item2" id="bag-c1"><label for="c1-toggle">C1</label></div>
+          <div class="grid-item2" id="bag-c2"><label for="c2-toggle">C2</label></div>
+          <div class="grid-item2" id="bag-c3"><label for="c3-toggle">C3</label></div>
+          <div class="grid-item2" id="bag-c4"><label for="c4-toggle">C4</label></div>
+          <div class="grid-item2" id="bag-c5"><label for="c5-toggle">C5</label></div>
+          <div class="grid-item2" id="bag-c6"><label for="c6-toggle">C6</label></div>
+          <div class="grid-item2" id="bag-c7"><label for="c7-toggle">C7</label></div>
+          <div class="grid-item2" id="bag-c8"><label for="c8-toggle">C8</label></div>
+          <div id="bag-text">You have no items in your bag.</div>
+          <div class="grid-item1" id="inventory-top">Top</div>
+          <div class="grid-item1" id="inventory-eyes">Eyes</div>
+          <div class="grid-item1" id="inventory-mouth">Mouth</div>
+          <div class="grid-item1" id="inventory-neck">Neck</div>
+          <div class="grid-item1" id="inventory-chest">Chest</div>
+          <div class="grid-item1" id="inventory-back">Back</div>
+          <div class="grid-item1" id="inventory-wrist">Wrist</div>
+          <div class="grid-item1" id="inventory-hands">Hands</div>
+          <div class="grid-item1" id="inventory-fingers">Fingers</div>
+          <div class="grid-item1" id="inventory-legs">Legs</div>
+          <div class="grid-item1" id="inventory-feet">Feet</div>
+          <div class="grid-item1" id="inventory-weight">Weight</div>
+          
+        </div>
+        <div id="me-inventory-container">
+          
           <br>
           <div id="inventory-items-container">
             <div class="inventory-container" id="inventory-top">Top</div>
-            <div class="inventory-container" id="inventory-eyes">Eyes</div>
+            <div class="inventory-container" id="inventory-eyes">Eyes</div><br>
             <div class="inventory-container" id="inventory-mouth">Mouth</div>
-            <div class="inventory-container" id="inventory-neck">Neck</div>
+            <div class="inventory-container" id="inventory-neck">Neck</div><br>
             <div class="inventory-container" id="inventory-chest">Chest</div>
-            <div class="inventory-container" id="inventory-back">Back</div>
+            <div class="inventory-container" id="inventory-back">Back</div><br>
             <div class="inventory-container" id="inventory-wrist">Wrist</div>
-            <div class="inventory-container" id="inventory-hands">Hands</div>
+            <div class="inventory-container" id="inventory-hands">Hands</div><br>
             <div class="inventory-container" id="inventory-fingers">Fingers</div>
-            <div class="inventory-container" id="inventory-legs">Legs</div>
+            <div class="inventory-container" id="inventory-legs">Legs</div><br>
             <div class="inventory-container" id="inventory-feet">Feet</div>
             <div class="inventory-container" id="inventory-weight">Weight</div>
           </div>
@@ -338,7 +669,7 @@
         
         <div id="me-bag">
           <div id="bag-container">
-            <div id="me-subtitle1">Bag</div>
+            
               <br>
               <div id="bag-item-container">
                 <div class="me-item-container" id="bag-a1"><label class="item-label" for="a1-toggle">a1</label></div>
@@ -373,7 +704,7 @@
                 <div class="item-stats" id="a1-item-stats">
                   <div id="a1-name">A1</label><button class="item-button" value="Equip" onclick="inventory.equip()"/>
                 -->
-              <div class="item-stats">
+              <div id="item-stats">
                   <div class="item-stats-name-container">
                     <div id="item-name">Name</div>
                   </div>
@@ -381,8 +712,6 @@
                     Equip
                   </div>
                 </div>
-                  
-                <br><br><br><br><br><br><br><br><br><br>                   <br>
                 </div>
               </div>
             </div>
