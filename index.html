@@ -8,10 +8,6 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
   </head>
-  <!DOCTYPE html>
-<html>
-<!DOCTYPE html>
-<html>
 <body>
   <style>
     /*select { 
@@ -125,10 +121,14 @@
     #switch-home:checked ~ * #page-home{
       visibility:visible;
     }*/
+    div {
+      display:inline-block;
+    }
     #switch-tabs-container {
       background-color: #8C8C8C;
       border-radius: 30px;
       padding:10px;
+      width:98%;
     }
     #tab {
       display:inline-block;
@@ -241,11 +241,10 @@
     #item-label:hover {
       cursor:help;
     }
-    .item-button {
-      background-color: #000000;
-      border:solid;
+    #item-button {
+      background-color: #FFFFFF;
       font-size:10px;
-      font-color: #FFF;
+      font-color: #000000;
     }
     #bag-a1:hover {
       cursor:help;
@@ -255,6 +254,33 @@
       padding:5px;
       text-align:center;
     }
+    #bag-text2 {
+      text-align:center;
+    }
+    #bag-text5 {
+      text-align: center;
+    }
+    #bag-text6 {
+      text-align:left;
+    }
+    #description-stats {
+      text-align:left;
+      display:none;
+      background: #8C8C8C;
+      border:solid;
+    }
+    #me-stats-stats {
+      display:none;
+      text-align:left;
+      background: #8C8C8C;
+      border:solid;
+    }
+    #me-stats-stats:hover {
+      cursor:help;
+    }
+    #description-stats:hover {
+      cursor: help;
+    }
     #me-subtitle {
       font-size: 24px;
       text-align:center;
@@ -262,6 +288,9 @@
     #me-subtitle1 {
       font-size: 24px;
       text-align:right;
+    }
+    #label {
+      visibility:inherit;
     }
     #home-page-toggle, #me-page-toggle {
       display:none;
@@ -275,16 +304,24 @@
     #me-page-toggle:checked ~ #page-me {
       display:block;
     }
-    #a1-toggle:checked ~ #item-stats {
-      display:block;
-      width:50%;
+    #a1-toggle, #a2-toggle, #a3-toggle, #a4-toggle, #a5-toggle, #a6-toggle, #a7-toggle, #a8-toggle {
+      display:none;
+    }
+    #b1-toggle, #b2-toggle, #b3-toggle, #b4-toggle, #b5-toggle, #b6-toggle, #b7-toggle, #b8-toggle {
+      display:none;
+    }
+    #c1-toggle, #c2-toggle, #c3-toggle, #c4-toggle, #c5-toggle, #c6-toggle, #c7-toggle, #c8-toggle {
+      display:none;
+    }
+    #top-toggle, #eyes-toggle, #mouth-toggle, #neck-toggle, #neck-toggle, #chest-toggle, #back-toggle, #wrist-toggle, #hands-toggle, #fingers-toggle, #legs-toggle, #feet-toggle, #weight-toggle {
+      display:none;
     }
     .grid-container {
       display:grid;
       /*grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
       grid-template-columns: 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px 28px ;*/
       grid-template-columns: 15px 15px 29px 29px 29px 29px 15px 15px 15px 15px 29px 15px 15px 29px 29px 15px 15px 29px 29px 15px 15px 29px 29px 15px 15px 29px 15px 15px;
-      grid-template-rows: 15px 30px 30px 30px 30px 15px 15px 30px 15px 15px 30px 30px 15px 15px 30px 15px 15px 15px 30px 15px 30px 15px;
+      grid-template-rows: 15px 30px 30px 30px 30px 15px 15px 30px 15px 15px 30px 30px 15px 15px 15px 15px 7px 7px 15px 15px 30px 15px 30px 15px;
     }
     .grid-item {
       text-align:center;
@@ -323,7 +360,7 @@
       grid-column-start: 2;
       grid-column-end: 8;
       grid-row-start: 7;
-      grid-row-end: 17;
+      grid-row-end: 19;
     }
     #inventory-top {
       grid-column-start: 3;
@@ -389,19 +426,19 @@
       grid-column-start: 3;
       grid-column-end: 5;
       grid-row-start: 15;
-      grid-row-end: 16;
+      grid-row-end: 17;
     }
     #inventory-weight {
       grid-column-start: 5;
       grid-column-end: 7;
       grid-row-start: 15;
-      grid-row-end: 16;
+      grid-row-end: 17;
     }
     #bag-container {
       grid-column-start: 10;
       grid-column-end: 28;
       grid-row-start: 7;
-      grid-row-end: 17;
+      grid-row-end: 19;
     }
     #bag-a1 {
       grid-column-start: 11;
@@ -554,14 +591,98 @@
       grid-row-start: 8;
       grid-row-end: 9;
     }
+    #bag-text2 {
+      grid-column-start: 13;
+      grid-column-end: 24;
+      grid-row-start: 14;
+      grid-row-end: 16;
+    }
+    #bag-text5 {
+      grid-column-start: 17;
+      grid-column-end: 21;
+      grid-row-start: 16;
+      grid-row-end: 18;
+    }
+    #bag-text6 {
+      grid-column-start: 21;
+      grid-column-end: 22;
+      grid-row-start: 16;
+      grid-row-end: 18;
+    }
+    #item-button {
+      grid-column-start: 15;
+      grid-column-end: 17;
+      grid-row-start: 16;
+      grid-row-end: 18;
+    }
+    #description-stats {
+      grid-column-start: 17;
+      grid-column-end: 26;
+      grid-row-start: 16;
+      grid-row-end: 20;
+    }
+    #me-stats-stats {
+      grid-column-start: 21;
+      grid-column-end: 28;
+      grid-row-start: 16;
+      grid-row-end: 20;
+    }
+    #bag-text5:hover ~ #description-stats {
+      display:inline-block;
+      cursor:help;
+    }
+    #description-stats:hover {
+      display:inline-block;
+    }
+    bag-text6:hover ~ #me-stats-stats {
+      display:inline-block;
+      cursor:help;
+    }
+    #me-stats-stats:hover {
+      display:inline-block;
+    }
   </style>
     <input type="radio" name="toggle-tab" id="home-page-toggle"/>
     <input type="radio" name="toggle-tab" id="me-page-toggle" checked/>
     <input type="radio" name="toggle-tab" id="camp-page-toggle"/>
     <input type="radio" name="toggle-tab" id="woods-page-toggle"/>
     
-    <input type="radio" name="toggle-item" id="a1-toggle"/>
+    <input type="radio" name="toggle-item" id="a1-toggle"checked/>
     <input type="radio" name="toggle-item" id="a2-toggle"/>
+    <input type="radio" name="toggle-item" id="a3-toggle"/>
+    <input type="radio" name="toggle-item" id="a4-toggle"/>
+    <input type="radio" name="toggle-item" id="a5-toggle"/>
+    <input type="radio" name="toggle-item" id="a6-toggle"/>
+    <input type="radio" name="toggle-item" id="a7-toggle"/>
+    <input type="radio" name="toggle-item" id="a8-toggle"/>
+    <input type="radio" name="toggle-item" id="b1-toggle"/>
+    <input type="radio" name="toggle-item" id="b2-toggle"/>
+    <input type="radio" name="toggle-item" id="b3-toggle"/>
+    <input type="radio" name="toggle-item" id="b4-toggle"/>
+    <input type="radio" name="toggle-item" id="b5-toggle"/>
+    <input type="radio" name="toggle-item" id="b6-toggle"/>
+    <input type="radio" name="toggle-item" id="b7-toggle"/>
+    <input type="radio" name="toggle-item" id="b8-toggle"/>
+    <input type="radio" name="toggle-item" id="c1-toggle"/>
+    <input type="radio" name="toggle-item" id="c2-toggle"/>
+    <input type="radio" name="toggle-item" id="c3-toggle"/>
+    <input type="radio" name="toggle-item" id="c4-toggle"/>
+    <input type="radio" name="toggle-item" id="c5-toggle"/>
+    <input type="radio" name="toggle-item" id="c6-toggle"/>
+    <input type="radio" name="toggle-item" id="c7-toggle"/>
+    <input type="radio" name="toggle-item" id="c8-toggle"/>
+    <input type="radio" name="toggle-item" id="top-toggle"/>
+    <input type="radio" name="toggle-item" id="eyes-toggle"/>
+    <input type="radio" name="toggle-item" id="mouth-toggle"/>
+    <input type="radio" name="toggle-item" id="neck-toggle"/>
+    <input type="radio" name="toggle-item" id="chest-toggle"/>
+    <input type="radio" name="toggle-item" id="back-toggle"/>
+    <input type="radio" name="toggle-item" id="wrist-toggle"/>
+    <input type="radio" name="toggle-item" id="hands-toggle"/>
+    <input type="radio" name="toggle-item" id="fingers-toggle"/>
+    <input type="radio" name="toggle-item" id="legs-toggle"/>
+    <input type="radio" name="toggle-item" id="feet-toggle"/>
+    <input type="radio" name="toggle-item" id="weight-toggle"/>
     
     <div id="switch-tabs-container">
       <div id="tabs">
@@ -571,6 +692,7 @@
         <span id="tab"><label for="woods-page-toggle" id="switch-woods">Woods</label></span>
       </div>
     </div>
+    <br>
     <br>
     <div id="page-home">
       <div id="home-body">
@@ -633,112 +755,182 @@
           <div class="grid-item2" id="bag-c7"><label for="c7-toggle">C7</label></div>
           <div class="grid-item2" id="bag-c8"><label for="c8-toggle">C8</label></div>
           <div id="bag-text">You have no items in your bag.</div>
-          <div class="grid-item1" id="inventory-top">Top</div>
-          <div class="grid-item1" id="inventory-eyes">Eyes</div>
-          <div class="grid-item1" id="inventory-mouth">Mouth</div>
-          <div class="grid-item1" id="inventory-neck">Neck</div>
-          <div class="grid-item1" id="inventory-chest">Chest</div>
-          <div class="grid-item1" id="inventory-back">Back</div>
-          <div class="grid-item1" id="inventory-wrist">Wrist</div>
-          <div class="grid-item1" id="inventory-hands">Hands</div>
-          <div class="grid-item1" id="inventory-fingers">Fingers</div>
-          <div class="grid-item1" id="inventory-legs">Legs</div>
-          <div class="grid-item1" id="inventory-feet">Feet</div>
-          <div class="grid-item1" id="inventory-weight">Weight</div>
           
-        </div>
-        <div id="me-inventory-container">
-          
+          <div id="bag-text2">
+            <div id="bag-text3">Currently Selected:</div>
+            <div id="bag-text4">None</div>
+          </div>  
           <br>
-          <div id="inventory-items-container">
-            <div class="inventory-container" id="inventory-top">Top</div>
-            <div class="inventory-container" id="inventory-eyes">Eyes</div><br>
-            <div class="inventory-container" id="inventory-mouth">Mouth</div>
-            <div class="inventory-container" id="inventory-neck">Neck</div><br>
-            <div class="inventory-container" id="inventory-chest">Chest</div>
-            <div class="inventory-container" id="inventory-back">Back</div><br>
-            <div class="inventory-container" id="inventory-wrist">Wrist</div>
-            <div class="inventory-container" id="inventory-hands">Hands</div><br>
-            <div class="inventory-container" id="inventory-fingers">Fingers</div>
-            <div class="inventory-container" id="inventory-legs">Legs</div><br>
-            <div class="inventory-container" id="inventory-feet">Feet</div>
-            <div class="inventory-container" id="inventory-weight">Weight</div>
+          <button id="item-button">Equip</button>
+          <div id="bag-text5">Description</div>
+          <div id="bag-text6">Stats</div>
+          <div id="description-stats">
+            <span id="label">
+              Description:
+            </span>
+            <div id="description-text"></div>
           </div>
-        </div>
-        
-        <div id="me-bag">
-          <div id="bag-container">
-            
-              <br>
-              <div id="bag-item-container">
-                <div class="me-item-container" id="bag-a1"><label class="item-label" for="a1-toggle">a1</label></div>
-                <div class="me-item-container" id="bag-a2"><label class="item-label" for="a2-toggle">a2</label></div>
-                <div class="me-item-container" id="bag-a3">a3</div>
-                <div class="me-item-container" id="bag-a4">a4</div>
-                <div class="me-item-container" id="bag-a5">a5</div>
-                <div class="me-item-container" id="bag-a6">a6</div>
-                <div class="me-item-container" id="bag-a7">a7</div>
-                <div class="me-item-container" id="bag-a8">a8</div>
-                <div class="me-item-container" id="bag-a9">a9</div>
-                <div class="me-item-container" id="bag-a10">a10</div>
-                <br>
-                <div class="me-item-container" id="bag-b1">b1</div>
-                <div class="me-item-container" id="bag-b2">b2</div>
-                <div class="me-item-container" id="bag-b3">b3</div>
-                <div class="me-item-container" id="bag-b4">b4</div>
-                <div class="me-item-container" id="bag-b5">b5</div>
-                <div class="me-item-container" id="bag-b6">b6</div>
-                <div class="me-item-container" id="bag-b7">b7</div>
-                <div class="me-item-container" id="bag-b8">b8</div>
-                <div class="me-item-container" id="bag-b9">b9</div>
-                <div class="me-item-container" id="bag-b10">b10</div>
-                <div id="bag-text">
-                  You currently have no items in your bag.
-                </div>
-                <div id="bag-text">
-                  Currently Selected:
-                </div>
-                <br>
-                <!--
-                <div class="item-stats" id="a1-item-stats">
-                  <div id="a1-name">A1</label><button class="item-button" value="Equip" onclick="inventory.equip()"/>
-                -->
-              <div id="item-stats">
-                  <div class="item-stats-name-container">
-                    <div id="item-name">Name</div>
-                  </div>
-                  <div class="item-button" onclick = "inventory.equip()">
-                    Equip
-                  </div>
-                </div>
-                </div>
-              </div>
-            </div>
+          <div id="me-stats-stats">
+            <span id="label">
+              Stats:
+            </span>
+            <div id="stats-text"></div>
           </div>
+          <div class="grid-item1" id="inventory-top"><label for="top-toggle">Top</label></div>
+          <div class="grid-item1" id="inventory-eyes"><label for="eyes-toggle">Eyes</label></div>
+          <div class="grid-item1" id="inventory-mouth"><label for="mouth-toggle">Mouth</label></div>
+          <div class="grid-item1" id="inventory-neck"><label for="neck-toggle">Neck</label></div>
+          <div class="grid-item1" id="inventory-chest"><label for="chest-toggle">Chest</label></div>
+          <div class="grid-item1" id="inventory-back"><label for="back-toggle">Back</label></div>
+          <div class="grid-item1" id="inventory-wrist"><label for="wrist-toggle">Wrist</label></div>
+          <div class="grid-item1" id="inventory-hands"><label for="hands-toggle">Hands</label></div>
+          <div class="grid-item1" id="inventory-fingers"><label for="fingers-toggle">Fingers</label></div>
+          <div class="grid-item1" id="inventory-legs"><label for="legs-toggle">Legs</label></div>
+          <div class="grid-item1" id="inventory-feet"><label for="feet-toggle">Feet</label></div>
+          <div class="grid-item1" id="inventory-weight"><label for="weight-toggle">Weight</label></div>
         </div>
-        <br><br>
       </div>
     </div>
 <script>
-  function inventory() {
-    this.top = 'none';
-    this.eyes = 'none';
-    this.mouth = 'none';
-    this.neck = 'none';
-    this.chest = 'none';
-    this.back = 'none';
-    this.wrist = 'none';
-    this.hands = 'none';
-    this.fingers = 'none';
-    this.legs = 'none';
-    this.feet = 'none';
-    this.weight = 0;
-    
-    this.equip = function(item) {
-      document.getElementById("inventory-top").innerHTML = "a1";
-    }
-    
+
+
+const a1 = ['a1-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a1']
+const a2 = ['a2-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a2']
+const a3 = ['a3-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a3']
+const a4 = ['a4-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a4']
+const a5 = ['a5-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a5']
+const a6 = ['a6-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a6']
+const a7 = ['a7-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a7']
+const a8 = ['a8-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-a8']
+const b1 = ['b1-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b1']
+const b2 = ['b2-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b2']
+const b3 = ['b3-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b3']
+const b4 = ['b4-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b4']
+const b5 = ['b5-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b5']
+const b6 = ['b6-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b6']
+const b7 = ['b7-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b7']
+const b8 = ['b8-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-b8']
+const c1 = ['c1-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c1']
+const c2 = ['c2-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c2']
+const c3 = ['c3-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c3']
+const c4 = ['c4-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c4']
+const c5 = ['c5-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c5']
+const c6 = ['c6-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c6']
+const c7 = ['c7-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c7']
+const c8 = ['c8-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change', 'bag-c8']
+const top1 = ['top-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const eyes1 = ['eyes-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const mouth1 = ['mouth-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const neck1 = ['neck-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const chest1 = ['chest-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const back1 = ['back-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const wrist1 = ['wrist-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const hands1 = ['hands-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const fingers1 = ['fingers-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const legs1 = ['legs-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const feet1 = ['feet-toggle', 'Name', 'Description', 'stat modifier 1', 'change', 'stat modifier 2', 'change', 'stat modifier 3', 'change']
+const weight1 = ['weight-toggle', 'Weight', 'weight mod 1', 'weight mod 2', 'weight mod 3', 'weight mod 4', 'weight mod 5', 'weight mod 6', 'weight mod 7', 'weight mod 8', 'weight mod 9', 'weight mod 10', 'weight mod 11']
+const boxes1 = [a1, a2, a3, a4, a5, a6, a7, a8, b1, b2, b3, b4, b5, b6, b7, b8, c1, c2, c3, c4, c5, c6, c7, c8, top1, eyes1, mouth1, neck1, chest1, back1, wrist1, hands1, fingers1, legs1, feet1, weight1]
+
+
+const item1 = ['Torn Baseball Cap', 'A Simple Baseball Cap', 'Armor', '1', 'Weight', '1']
+const items1 = [item1,]
+
+i1 = 99;
+i2 = 99;
+selected1 = 0;
+totalitems1 = 0;
+gamestate1 = '';
+tick1 = 0;
+
+function init1() {
+  if (gamestate1 == 'INIT') {
+    setTimeout(findselected1, 200);
   }
+  if (gamestate1 == '') {
+    gamestate1 = 'INIT';
+    document.getElementById("me-title").innerHTML = gamestate1;
+    acquireitem1(0);
+  }
+}
+function tick() {
+  document.getElementById("me-title").innerHTML = 'tick';
+  if(tick1 == 1) {
+    tick1 = 0;
+    setTimeout(findselected1, 200);
+  }
+}
+function retick() {
+  document.getElementById("me-title").innerHTML = 'retick';
+  if(tick1 == 0) {
+    tick1 = 1;
+  }
+  setTimeout(tick, 200);
+}
+function findselected1() {
+  for(i1 = 0; document.getElementById(boxes1[i1][0]).checked !== true; i1++) {
+    selected1 = i1 + 1;
+  }
+  if(document.getElementById("a1-toggle").checked == true) {
+    selected1 = 0;
+  }
+  document.getElementById("me-title").innerHTML = 'findselected';
+  document.getElementById("me-subtitle").innerHTML = selected1;
+  setTimeout(selectedtext1, 200);
+}
+function selectedtext1() {
+  document.getElementById("me-title").innerHTML = 'selectedtext1';
+  document.getElementById("bag-text4").innerHTML = boxes1[selected1][1];
+  document.getElementById("description-text").innerHTML = boxes1[selected1][2];
+  if(gamestate1 == 'INIT') {
+    setTimeout(countitems1, 200);
+  }
+  if(gamestate1 == 'RUNNING') {
+    setTimeout(retick, 200);
+  }
+}
+function acquireitem1(item) {
+  for (i1 = 1; i1 < 9; i1++) {
+    i2 = i1 - 1;
+    boxes1[totalitems1][i1] = items1[item][i2];
+  }
+  if (gamestate1 == 'INIT') {
+    document.getElementById("me-title").innerHTML = gamestate1;
+    setTimeout(init1, 200);
+  }
+  if (gamestate1 == 'RUNNING') {
+    setTimeout(retick, 200);
+  }
+}
+function countitems1() {
+  document.getElementById("me-title").innerHTML = 'countitems1';
+  for(i1 = 0; boxes1[i1][1] !== 'Name'; i1++) {
+    totalitems1 = i1;
+    if(i1 > 24) {
+      i1 = -1;
+    }
+  }
+  if(gamestate1 == 'INIT') {
+    gamestate1 = 'RUNNING';
+  }
+  document.getElementById("me-subtitle1").innerHTML = totalitems1;
+  setTimeout(retick, 200);
+}
+function visibleboxes1() {
+  i1 = totalitems1+1;
+  if(boxes[0][1] == 'Name') {
+      i1 = 0;
+  }
+  for(; i1 < 24; i1++) {
+    
+    document.getElementById(boxes1[i1][9]).style.display = 'none';
+  }
+  for(i1 = 0; i1 < totalitems + 1; i++) {
+    document.getElementById(boxes1[i1][9]).style.display = 'inline-block';
+  }
+  setTimeout(retick, 200);
+}
+init1();
+
+
 </script>
-</body>
-</html>
